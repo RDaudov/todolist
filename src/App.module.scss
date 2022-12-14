@@ -1,0 +1,32 @@
+.App {
+  padding-top: 3%;
+  background-color: rgb(10, 25, 41);
+  font-size: 14px;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.form {
+  margin: 20px;
+}
+
+.task {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 940px) {
+  .container {
+    flex-direction: column;
+  }
+}

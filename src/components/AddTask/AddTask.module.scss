@@ -1,0 +1,58 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border: 1px solid #0f3860;
+    border-radius: 10%;
+    box-shadow: 0 0 5px rgb(58, 104, 116);
+}
+
+input {
+    color: rgb(34, 153, 168);
+    border: none;
+    border-bottom: 1px solid rgb(58, 104, 116);
+    margin: 12px 20px;
+    padding: 10px;
+    background-color: transparent;
+
+    &:focus-visible {
+        outline: none;
+        border-bottom: 1px solid rgb(111 204 229);
+    }
+
+    &::placeholder {
+        color: rgb(34, 153, 168);
+    }
+
+    &:focus-visible::placeholder {
+        color: transparent;
+    }
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    color: rgb(34, 153, 168);
+    border: 1px solid rgb(58, 104, 116);
+    background-color: transparent;
+    padding: 5px 10px;
+}
+
+.date {
+    &::-webkit-calendar-picker-indicator {
+        visibility: hidden;
+    }
+}
+
+.button {
+    height: 35px;
+    border-radius: 10%/100%;
+    border: none;
+    padding: 0 40px;
+    color: #d7eff3;
+    background-color: #155391;
+    margin: 10px;
+
+    &:hover {
+        background-color: #206ebd;
+        box-shadow: 0 0 10px rgb(34, 140, 167);
+    }
+}
