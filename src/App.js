@@ -23,7 +23,7 @@ function App() {
         <div className={styles.task}>
           <TaskList tasks={taskList} sets={setTaskList} className={styles.task} />
         </div>
-        <div className={styles.task}>12343</div>
+        <div className={styles.task}>12343</div> 
       </div>
     </div>
   );
