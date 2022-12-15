@@ -23,11 +23,11 @@ const AddTask = (props) => {
         }
 
         props.onTaskList(header, description, date);
-    //     await addDoc(collection(db, "todos"), {
-    //         header,
-    //         description,
-    //         date
-    //     })
+        await addDoc(collection(db, "todos"), {
+            header,
+            description,
+            date
+        })
      }
 
     return (

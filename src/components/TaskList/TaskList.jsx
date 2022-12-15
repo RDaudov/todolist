@@ -5,7 +5,7 @@ import styles from "./TaskList.module.scss"
 
 const TaskList = props => {
     function deleteTask(id) {
-        let newTaskList = [...props.tasks].filter(task => task.id!=id)
+        let newTaskList = [...props.tasks].filter(task => task.id!==id)
         props.sets(newTaskList)
 
     }
