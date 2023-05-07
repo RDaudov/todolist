@@ -16,7 +16,6 @@ function App() {
   return (
 
     <div className={styles.App}>
-      <div>we</div>
       <div className={styles.container}>
         <div className={styles.form}>
           <AddTask onTaskList={addTask} />
