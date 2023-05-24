@@ -5,7 +5,7 @@ const Todos = ({id, title, url}) => {
     return (
         <div className="list">
             <div className="id">{id}</div>
-            <div className="title">{title}</div>
+            <div sy>{title}</div>
             <img src={url} alt=""/>
         </div>
     )
