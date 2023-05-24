@@ -6,7 +6,7 @@ const Todos = ({id, title, url}) => {
         <div className="list">
             <div className="id">{id}</div>
             <div sy>{title}</div>
-            <img src={url} alt=""/>
+            <img src={url} alt=""/> 
         </div>
     )
 }
