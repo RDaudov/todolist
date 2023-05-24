@@ -1,8 +1,9 @@
 .App {
+  box-sizing: border-box;
   padding-top: 3%;
   background-color: rgb(10, 25, 41);
   font-size: 14px;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .container {
@@ -10,6 +11,7 @@
   margin: auto;
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 
 body {
@@ -25,8 +27,3 @@ body {
   flex-direction: column;
 }
 
-@media (max-width: 940px) {
-  .container {
-    flex-direction: column;
-  }
-}
