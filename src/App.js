@@ -3,37 +3,32 @@ import styles from "./App.module.scss";
 import AddTask from "./components/AddTask/AddTask";
 import TaskList from "./components/TaskList/TaskList";
 import Todos from "./components/Todos/Todos";
-// import { db } from './firebase';
-// import {
-//   query,
-//   collection,
-//   onSnapshot,
-//   QuerySnapshot
-// } from 'firebase/firestore';
+import { db } from './firebase';
+import {
+  query,
+  collection,
+  onSnapshot,
+  QuerySnapshot
+} from 'firebase/firestore';
 
 function App() {
   const [taskList, setTaskList] = useState([])
   const [todos, setTodos] = useState([])
 
   useEffect(() => {
-    // console.log('useeffect');
-    // const q = query(collection(db, 'todos'))
-    // const unsubcribe = onSnapshot(q, (QuerySnapshot) => {
-    //   let todosArr = []
-    //   QuerySnapshot.forEach((doc) => {
-    //     todosArr.push({
-    //       ...doc.data(),
-    //       id: doc.id
-    //     })
-    //   });
-    //   setTaskList(todosArr)
-    // })
-    // return () => unsubcribe()
-    fetch('https://jsonplaceholder.typicode.com/photos')
-      .then(res => res.json())
-      .then(data => setTodos(data))
-      .catch((err) => 
-      console.log(err))
+    console.log('useeffect');
+    const q = query(collection(db, 'todos'))
+    const unsubcribe = onSnapshot(q, (QuerySnapshot) => {
+      let todosArr = []
+      QuerySnapshot.forEach((doc) => {
+        todosArr.push({
+          ...doc.data(),
+          id: doc.id
+        })
+      });
+      setTaskList(todosArr)
+    })
+    return () => unsubcribe()
   },[])
 
   const addTask = (taskHeader, taskDescription, taskDate, taskFile) => {
