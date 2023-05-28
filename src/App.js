@@ -6,7 +6,7 @@ import {
 import styles from "./App.module.scss";
 import AddTask from "./components/AddTask/AddTask";
 import TaskList from "./components/TaskList/TaskList";
-import db from './firebase'
+import {db} from './firebase'
 import {query, collection,onSnapshot} from "firebase/firestore";
 
 function App() {
