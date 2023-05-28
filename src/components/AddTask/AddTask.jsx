@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./AddTask.module.scss"
-import { db } from "../../firebase";
-import { collection, addDoc} from "firebase/firestore";
+// import { db } from "../../firebase";
+// import { collection, addDoc} from "firebase/firestore";
 
 const AddTask = (props) => {
 
@@ -22,12 +22,12 @@ const AddTask = (props) => {
             return;
         }
 
-        props.onTaskList(header, description, date);
-        await addDoc(collection(db, "todos"), {
-            header,
-            description,
-            date
-        })
+        // props.onTaskList(header, description, date);
+        // await addDoc(collection(db, "todos"), {
+        //     header,
+        //     description,
+        //     date
+        // })
      }
 
     return (

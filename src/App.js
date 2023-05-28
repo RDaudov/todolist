@@ -3,13 +3,13 @@ import styles from "./App.module.scss";
 import AddTask from "./components/AddTask/AddTask";
 import TaskList from "./components/TaskList/TaskList";
 import Todos from "./components/Todos/Todos";
-import { db } from './firebase';
-import {
-  query,
-  collection,
-  onSnapshot,
-  QuerySnapshot
-} from 'firebase/firestore';
+// import { db } from './firebase';
+// import {
+//   query,
+//   collection,
+//   onSnapshot,
+//   QuerySnapshot
+// } from 'firebase/firestore';
 
 function App() {
   const [taskList, setTaskList] = useState([])

@@ -3,10 +3,10 @@ import styles from "./Todos.module.scss"
 
 const Todos = ({id, title, url}) => {
     return (
-        <div className="list">
-            <div className="id">{id}</div>
-            <div sy>{title}</div>
-            <img src={url} alt=""/> 
+        <div className={styles.list}>
+            <div className={styles.id}>{id}</div>
+            <div className={styles.title}>{title}</div>
+            <img className={styles.img} src={url} alt=""/> 
         </div>
     )
 }
